@@ -11,9 +11,13 @@ namespace Labb1Calculator
 
         public Calculator()
         {
-            FirstNumber = ;
-            SecondNumber = ;
-            NumberInMemory = ;
+            FirstNumber = 0;
+            SecondNumber = 0;
+            NumberInMemory = new List<int>();
+        }
+
+        public override string ToString(){
+            Console.WriteLine("First number: {0} \nSecond number: {1} \nNumber in memory: {2} ", FirstNumber, SecondNumber, NumberInMemory);
         }
     }
 }
