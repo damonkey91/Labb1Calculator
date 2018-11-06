@@ -5,8 +5,8 @@ namespace Labb1Calculator
 {
     public class Calculator
     {
-        int firstNumber { get; set; }
-        int secondNumber { get; set; }
+        int FirstNumber { get; set; }
+        int SecondNumber { get; set; }
         List<int> NumberInMemory { get; set; }
 
         public Calculator()
@@ -17,7 +17,15 @@ namespace Labb1Calculator
         }
 
         public override string ToString(){
-            Console.WriteLine("First number: {0} \nSecond number: {1} \nNumber in memory: {2} ", FirstNumber, SecondNumber, NumberInMemory);
+            return "First number: " + FirstNumber + "\nSecond number: " + SecondNumber + "\nNumber in memory: " + NumberInMemory;
+        }
+
+        public int SumNumbers(){
+            return FirstNumber + SecondNumber;
+        }
+
+        public int MultiplyNumbers(){
+            return FirstNumber * SecondNumber;
         }
     }
 }
