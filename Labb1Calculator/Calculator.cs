@@ -34,17 +34,17 @@ namespace Labb1Calculator
             int First = 0;
             int Last = 0;
 
-            if (FirstNumber > SecondNumber)
+            if (FirstNumber < SecondNumber)
             {
-                First = FirstNumber;
+                First = FirstNumber - 1;
                 Last = SecondNumber;
             } else 
             {
-                First = SecondNumber;
+                First = SecondNumber - 1;
                 Last = FirstNumber;
             }
 
-            for (int i = First ; i == Last; i++)
+            for (int i = First ; i <= Last; i++)
             {
                 Sum = Sum + i;
             }
