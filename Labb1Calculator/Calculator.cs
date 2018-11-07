@@ -7,6 +7,7 @@ namespace Labb1Calculator
     {
         public int FirstNumber { get; set; }
         public int SecondNumber { get; set; }
+        public int Sum { get; set; }
         public List<int> NumberInMemory { get; set; }
 
         public Calculator()
@@ -32,7 +33,6 @@ namespace Labb1Calculator
         {
             int First = 0;
             int Last = 0;
-            int Sum = 0;
 
             if (FirstNumber > SecondNumber)
             {
