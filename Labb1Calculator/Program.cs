@@ -10,7 +10,14 @@ namespace Labb1Calculator
 
             do
             {
-                Console.WriteLine("Choose one: \n1. Add two numbers \n2.Multiply two numbers \n3.Sum the numbers between two numbers. \n4.Add number to memory \n5.Clear memory \n6.Print memory. \n7.Quit");
+                Console.WriteLine("Choose one: \n" +
+                                  "1.Add two numbers \n" +
+                                  "2.Multiply two numbers \n" +
+                                  "3.Sum the numbers between two numbers. \n" +
+                                  "4.Add number to memory \n" +
+                                  "5.Clear memory \n" +
+                                  "6.Print memory. \n" +
+                                  "7.Quit");
                 Calculator calc = new Calculator();
                 String answer = Console.ReadLine();
                 switch (answer)
@@ -45,14 +52,20 @@ namespace Labb1Calculator
                     case "4":
                         Console.WriteLine("You chose add to memory");
                         Console.WriteLine("Write a number: ");
-                        calc.FirstNumber = int.Parse(Console.ReadLine());
+                        calc.NumberInMemory.Add(int.Parse(Console.ReadLine()));
                         Console.WriteLine("Number successfully added to memory");
+                        Console.WriteLine("\nWelcome again");
                         break;
                     case "5":
                         Console.WriteLine("You chose clear memory \nMemory cleared");
+                        calc.NumberInMemory.Clear();
+                        Console.WriteLine("\nWelcome again");
                         break;
                     case "6":
                         Console.WriteLine("You chose print memory");
+                        Console.WriteLine("numbers in memory is/are");
+                        calc.NumberInMemory.ForEach(Console.WriteLine);
+                        Console.WriteLine("\nWelcome again");
                         break;
                     case "7":
                         Console.WriteLine("You chose to quit \nBye bye!");
@@ -60,10 +73,10 @@ namespace Labb1Calculator
                         break;
                     default:
                         Console.WriteLine("You chose wrong, try again");
+                        Console.WriteLine("\nWelcome again");
                         break;
                 }
-            } while (Mrbool);
-           
+            } while (Mrbool);         
         }
     }
 }
