@@ -5,9 +5,9 @@ namespace Labb1Calculator
 {
     public class Calculator
     {
-        int FirstNumber { get; set; }
-        int SecondNumber { get; set; }
-        List<int> NumberInMemory { get; set; }
+        public int FirstNumber { get; set; }
+        public int SecondNumber { get; set; }
+        public List<int> NumberInMemory { get; set; }
 
         public Calculator()
         {
