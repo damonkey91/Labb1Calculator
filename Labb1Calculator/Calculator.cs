@@ -27,5 +27,29 @@ namespace Labb1Calculator
         public int MultiplyNumbers(){
             return FirstNumber * SecondNumber;
         }
+
+        public int SumInbetween()
+        {
+            int First = 0;
+            int Last = 0;
+            int Sum = 0;
+
+            if (FirstNumber > SecondNumber)
+            {
+                First = FirstNumber;
+                Last = SecondNumber;
+            } else 
+            {
+                First = SecondNumber;
+                Last = FirstNumber;
+            }
+
+            for (int i = First ; i == Last; i++)
+            {
+                Sum = Sum + i;
+            }
+
+            return Sum;
+        }
     }
 }
