@@ -18,7 +18,8 @@ namespace Labb1Calculator
         }
 
         public override string ToString(){
-            return "First number: " + FirstNumber + "\nSecond number: " + SecondNumber + "\nNumber in memory: " + NumberInMemory;
+            String memory = String.Join(",", NumberInMemory);
+            return "First number: " + FirstNumber + "\nSecond number: " + SecondNumber + "\nNumber in memory: " + memory;
         }
 
         public int SumNumbers(){
@@ -36,11 +37,11 @@ namespace Labb1Calculator
 
             if (FirstNumber < SecondNumber)
             {
-                First = FirstNumber - 1;
+                First = FirstNumber;
                 Last = SecondNumber;
             } else 
             {
-                First = SecondNumber - 1;
+                First = SecondNumber;
                 Last = FirstNumber;
             }
 

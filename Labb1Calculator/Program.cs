@@ -8,6 +8,7 @@ namespace Labb1Calculator
         {
             bool Mrbool = true;
 
+            Calculator calc = new Calculator();
             do
             {
                 Console.WriteLine("Choose one: \n" +
@@ -16,9 +17,9 @@ namespace Labb1Calculator
                                   "3.Sum the numbers between two numbers. \n" +
                                   "4.Add number to memory \n" +
                                   "5.Clear memory \n" +
-                                  "6.Print memory. \n" +
+                                  "6.Print calculator contents. \n" +
                                   "7.Quit");
-                Calculator calc = new Calculator();
+
                 String answer = Console.ReadLine();
                 switch (answer)
                 {
@@ -62,9 +63,8 @@ namespace Labb1Calculator
                         Console.WriteLine("\nWelcome again");
                         break;
                     case "6":
-                        Console.WriteLine("You chose print memory");
-                        Console.WriteLine("numbers in memory is/are");
-                        calc.NumberInMemory.ForEach(Console.WriteLine);
+                        Console.WriteLine("You chose print calculator content");
+                        Console.WriteLine(calc.ToString());
                         Console.WriteLine("\nWelcome again");
                         break;
                     case "7":
